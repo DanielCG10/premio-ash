@@ -1,12 +1,9 @@
-const prev = document.querySelector('.prev')
-const next = document.querySelector('.next')
-const slider = document.querySelector('.slider')
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLarge = document.querySelector(".nav-large");
 
-prev.addEventListener('click', () => {
-    slider.scrollLeft -= 300
-})
-
-
-next.addEventListener('click', () => {
-    slider.scrollLeft += 300  // Cambia -= a +=
-})
+    // Agregar evento de clic para mostrar/ocultar menú de hamburguesa
+    mobileMenu.addEventListener("click", function () {
+        navLarge.classList.toggle("show");
+    });
+});
