@@ -2,30 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
     font-family: 'open sans';
 }
-  .col a {
-  text-decoration: none;
-  color: gold;
-  margin: 0 10px;
-  transition: color 0.3s; /* Agrega una transición suave para el cambio de color */
-}
-
-.col a:hover {
-  color: yellow; /* Cambia el color al pasar el cursor sobre el enlace */
-}
-@media only screen and (max-width: 600px) {
-    /* Estilos específicos para pantallas con un ancho máximo de 600px */
-    .col a {
-      display: block; /* Cambia a un formato de bloque para ocupar toda la anchura */
-      margin: 5px 0; /* Ajusta el margen para mejorar la legibilidad en pantallas pequeñas */
-    }
-}
-
-
+    
 .contenedor {
     padding: 60px 0;
     width: 90%;
@@ -42,20 +24,49 @@ body {
 }
 
 /* Header */
-
 header {
     width: 100%;
     height: 720px;
     background: #696768;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(39, 9%, 45%, 0.459), hsla(60, 1%, 29%, 0.664)), url(../img/logo.jpg);
+    background: url(../img/logo.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(43, 6%, 44%, 0.767), hsla(47, 8%, 43%, 0.664)), url(../img/logo.jpg);
+    background:  url(../img/logo.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
+
+/* Menu Hamburguesa */
+.menu-toggle,
+.menu-icon {
+    cursor: pointer;
+    display: inline-block; /* Mostrar inicialmente en línea */
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-large {
+    display: none; /* Ocultar inicialmente para pantallas pequeñas */
+}
+
+/* Estilos para pantallas pequeñas (hasta 600px) */
+@media only screen and (max-width: 600px) {
+    .menu-toggle,
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-large.show {
+        display: flex; /* Mostrar cuando la clase 'show' está presente */
+        /* ...otros estilos según sea necesario... */
+    }
+}
+
 
 nav{
     text-align: right;
@@ -196,92 +207,39 @@ main .sobre-nosotros{
     transform: scale(1);
 }
 
+
 /* Galardonados */
-.contenedor {
-    text-align: center; /* Alinea el contenido al centro */
-}
 
-.container {
-    position: relative;
-    display: inline-block; /* Para ajustar el ancho al contenido */
-}
-
-.container .slider {
+#contenedorPrincipal {
     display: flex;
-    background: #343333;
-    padding: 2px;
-    width: 600px;
-    height: 150px;
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
     scroll-behavior: smooth;
-    margin: 0 auto; /* Para centrar el slider dentro del contenedor */
 }
 
-.container .slider img {
-    margin: 3px;
-}
-
-.container .control {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #805e0a;
-    cursor: pointer;
-    object-fit: cover;
-    padding: 10px;
-    z-index: 1; /* Asegura que los botones estén sobre el slider */
-}
-
-.container .prev {
-    left: 0;
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-.container .next {
-    right: 0; /* Ajusta el lado derecho en lugar de izquierdo */
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-
-.cards{
+.contenedorCliente {
+    flex: 0 0 auto;
+    width: 300px;
+    padding: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff8800; /* Cambiar a naranja oscuro, puedes ajustar el tono si es necesario */
+    background-color: #ff8800; /* Cambiar a naranja oscuro, puedes ajustar el tono si es necesario */
+    border-radius: 8px;
+    scroll-snap-align: start;
     display: flex;
-    justify-content: space-evenly;
-}
-
-.cards .card{
-    background: #343333;
-    display: flex;
-    width: 20%;
-    height: 300px;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 3px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    justify-content: center;
 }
 
-.cards .card img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    display: block;
+img {
+    width: 70%; /* Hace que todas las imágenes tengan el mismo ancho */
+    height: 70%; /* Esto mantiene la proporción original de la imagen */
+    border-radius: 5px; /* Ajusta según sea necesario */
 }
 
-.cards .card > .contenido-texto-card{
-    width: 80%;
-    color: #fff;
-    text-align: center;
-}
 
-.cards .card > .contenido-texto-card p{
-    font-weight: 300;
-    padding-top: 5px;
-    
-}
 
 /*  Our team */
 
