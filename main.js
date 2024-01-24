@@ -1,9 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navLarge = document.querySelector(".nav-large");
-
-    // Agregar evento de clic para mostrar/ocultar menú de hamburguesa
-    mobileMenu.addEventListener("click", function () {
-        navLarge.classList.toggle("show");
+document.addEventListener('DOMContentLoaded', function () {
+    var menuIcon = document.getElementById('menu-icon');
+    var menu = document.getElementById('menu');
+  
+    menuIcon.addEventListener('click', function () {
+      if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
     });
-});
+  });
+  
+  function openTool(toolId) {
+    var toolModal = document.getElementById(toolId);
+    toolModal.style.display = 'block';
+  }
+  
+  function closeTool(toolId) {
+    var toolModal = document.getElementById(toolId);
+    toolModal.style.display = 'none';
+  }
