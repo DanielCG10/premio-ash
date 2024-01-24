@@ -15,25 +15,30 @@
 
 <body>
     <header>
-        <div class="col text-end">
-            <!-- Menú de hamburguesa -->
-            <!-- Imagen del menú de hamburguesa para pantallas pequeñas -->
-            <img src="img/menu.png" alt="Menú" class="menu-icon" id="mobile-menu">
-            <!-- Menú de navegación para pantallas grandes -->
-            <div class="nav-large">
-                <h5>
-                    <a href="login.html">Acceso</a>
-                    <a href="bases.html">Bases del premio</a>
-                </h5>
-            </div>
+        <img id="menu-icon" src="img/menu.png" alt="Menú" onclick="toggleMenu()">
+      
+        <div id="menu">
+          <a href="login.html">Inicio de Sesión</a>
+          <a href="bases.html">Bases</a>
         </div>
+      
+        <div id="tool1" class="tool-modal">
+          <h2>Herramienta 1</h2>
+          <!-- Contenido de la Herramienta 1 -->
+        </div>
+      
+        <div id="tool2" class="tool-modal">
+          <h2>Herramienta 2</h2>
+          <!-- Contenido de la Herramienta 2 -->
+        </div>
+      
         <div class="wave" style="height: 140px; overflow: hidden;">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
-            </svg>
+          <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;"></path>
+          </svg>
         </div>
-    </header>
+      </header>
     
     <main>
         <section class="contenedor sobre-nosotros">
